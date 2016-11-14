@@ -154,13 +154,14 @@ document.getElementById("callDoubleNum").addEventListener("click", function() {
 //    If so, output to the HTML page: Yes, the value of num1 is greater than num2
 //    If not, output to the HTML page: No, the value of num1 is not greater than num2
 
-var num1 = 5;
+var num1 = 5 ;
 var num2 = 10;
-if num1 > num2 {document.getElementById("q9").innerHTML = "Yes, the value of num1 is greater than num2"}
-else {document.getElementById("q9").innerHTML = "No, the value of num1 is not greater than num2"};
 
-
-
+if (num1 > num2) {
+  var q9 = "Yes, the value of num1 is greater than num2.";
+}
+else {var q9="No, the value of num1 is not greater than num2.";}
+document.getElementById("q9").innerHTML = q9;
 
 
 // 10. Set the variable 'score' to a number between 1-100.
@@ -169,9 +170,13 @@ else {document.getElementById("q9").innerHTML = "No, the value of num1 is not gr
 //    If the score is between 60 and 89, output to the HTML page "Nice work, keep practicing".
 //    If the score is below 59, output to the HTML page "Very bad: study more and retake the test".
 //    Test to make sure each condition is met properly.
+var score = 95
+if (score <= 59) {var q10 = "Very bad: study more and retake the test";}
 
+if (score <= 89 && score >= 60) {var q10="Nice work, keep practicing";}
+else {var q10 = "Great job";}
 
-
+document.getElementById("q10").innerHTML = q10;
 
 
 
